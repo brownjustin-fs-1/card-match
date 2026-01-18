@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Match</title>
+
+    <!-- Open Sans: Medium (500) & Bold (700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="game">
+        <header class="game__header">
+          <div class="game__titleBlock">
+            <h1 class="game__title">Card Match</h1>
+            <p class="game__subtitle">
+              Use your attempts to try to find the matching pairs of cards.
+            </p>
+          </div>
+
+          <div class="game__attempts">
+            <span class="game__attemptsLabel">Attempts left:</span>
+            <span id="attemptsLeft" class="game__attemptsValue">3</span>
+          </div>
+        </header>
+
+        <section class="game__boardWrap">
+          <div id="board" class="board" aria-label="Card board"></div>
+        </section>
+
+        <section class="game__status">
+          <p id="statusText" class="game__statusText" aria-live="polite"></p>
+          <button id="restartBtn" class="btn" type="button">Start Over!</button>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
